@@ -1,6 +1,8 @@
 .Search_content {
   background-size: cover;
-  padding: 42px 0 41px 0;
+  background-position: center;
+  padding: 42px 40px 41px 40px;
+  border-radius: 8px;
 }
 
 .Search_searcher {
@@ -16,9 +18,19 @@
 }
 
 .Search_divInput {
-  background-color: blue;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* background-color: blue; */
   max-width: 600px;
   width: 100%;
+}
+
+.Search_divInput > img {
+  height: 18px;
+  width: 18px;
+  margin: 0 0 2px 12px;
+  pointer-events: none;
 }
 
 .Search_divInput > input {
