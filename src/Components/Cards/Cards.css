@@ -1,0 +1,73 @@
+.Cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.Cards_card {
+  display: flex;
+  gap: 16px;
+  padding: 12px;
+  border-radius: 4px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+.Cards_cardDivLogo, .Cards_cardDivLogo > img {
+  max-height: 90px;
+  max-width: 90px;
+  border-radius: 4px;
+}
+.Cards_cardDivInfo {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+}
+.Cards_cardInfo {
+  display: flex;
+  flex-direction: column;
+}
+.Cards_cardCompanyName {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #334680;
+  margin-top: 1px;
+}
+.Cards_cardJobTitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #334680;
+  margin: 8px 0 13px 0;
+}
+.Cards_cardDivJobType {
+  border: 1px solid #334680;
+  border-radius: 4px;
+  display: inline;
+  padding: 1px 8px 4px 8px;
+}
+.Cards_cardDivJobType > span {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #334680;
+}
+
+/* .Cards_cardDateLocation {
+  background-color: rgb(17, 255, 0);
+} */
+.Cards_cardDivLocation, .Cards_cardDivDate {
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #B9BDCF;
+}
+.Cards_cardDivLocation > img, .Cards_cardDivDate > img {
+  height: 18px;
+  width: 18px;
+}
