@@ -1,0 +1,6 @@
+.Home_divMain {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 42px;
+}

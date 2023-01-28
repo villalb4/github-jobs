@@ -1,14 +1,17 @@
 import React from 'react'
+import './Home.css'
+import Cards from '../../Components/Cards/Cards'
 import Filters from '../../Components/Filters/Filters'
 import Search from '../../Components/Search/Search'
 
 function Home() {
   return (
-    <div>
+    <div className='Home'>
       <Search />
-      <section>
+      <div className='Home_divMain'>
         <Filters />
-      </section>
+        <Cards />
+      </div>
     </div>
   )
 }
