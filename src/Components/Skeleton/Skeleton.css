@@ -1,0 +1,47 @@
+.Skeleton {
+  /* background-color: red; */
+  width: 100%;
+}
+
+.Skeleton_header {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  /* animation: skeleton-loading 1s linear infinite alternate; */
+  /* margin-bottom: 10px; */
+}
+.Skeleton_logo {
+  width: 145px;
+  height: 36px;
+  animation: skeleton-loading 1s linear infinite alternate;
+  border-radius: 4px;
+}
+
+.Skeleton_search {
+  height: 138px;
+  width: 100%;
+  animation: skeleton-loading 1s linear infinite alternate;
+  margin-bottom: 42px;
+  border-radius: 4px;
+}
+
+.Skeleton_divFilterData {
+  display: flex;
+}
+.Skeleton_filters {
+  max-width: 379px;
+  height: 290.47px;
+  animation: skeleton-loading 1s linear infinite alternate;
+
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(198, 19%, 86%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
