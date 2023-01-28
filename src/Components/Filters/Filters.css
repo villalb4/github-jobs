@@ -1,6 +1,7 @@
 .Filters {
-  margin-top: 44px;
   font-family: 'Poppins';
+  max-width: 379px;
+  width: 100%;
 }
 
 /* ------ Location filter ------ */
@@ -23,7 +24,6 @@ h2 {
   border-radius: 4px;
   background-color: white;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
-  max-width: 379px;
   margin-top: 14px;
 }
 .Filters_divLocation > div > img {
