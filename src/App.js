@@ -1,14 +1,25 @@
 // import { useEffect } from 'react';
 import './App.css';
 import Header from './Components/Header/Header';
+import Skeleton from './Components/Skeleton/Skeleton';
 import Home from './Pages/Home/Home';
-// import { useDispatch } from 'react-redux';
+import { useGetJobsQuery } from './Store/apis/jobs';
 
 function App() {
+
+  const { data, isLoading } = useGetJobsQuery()
+  console.log(data)
+
   return (
     <div className="App">
-      <Header />
-      <Home />
+      {/* <Skeleton /> */}
+      { isLoading === true 
+        ? <Skeleton /> :
+        <main>
+          <Header />
+          <Home /> 
+        </main>
+      }
     </div>
   );
 }
