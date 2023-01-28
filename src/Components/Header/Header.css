@@ -9,7 +9,8 @@ h1 {
   line-height: 36px;
   color: #282538;
   cursor: pointer;
-  transition: all ease 0.3s;
+  transition: all ease 0.2s;
+  display: inline;
 }
 h1:hover {
   color: #5f5b7b;
