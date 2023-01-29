@@ -17,7 +17,7 @@
 }
 .Cards_card:hover {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.145);
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 .Cards_cardDivLogo, .Cards_cardDivLogo > img {
   max-height: 90px;
