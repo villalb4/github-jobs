@@ -1,13 +1,20 @@
-export const jobsAdapter = (data) => {
+import jobTypeUtil from "../Utils/jobTypeUtil"
+import locationUtil from "../Utils/locationUtil"
+import dateUtil from "../Utils/dateUtil"
 
-  return console.log(data)
-    
+const jobsAdapter = (data) => {
+  const adapting = data.jobs.map(e => {
+    return {
+      location: locationUtil(e.candidate_required_location),
+      company_logo: e.company_logo,
+      company_name: e.company_name,
+      description: e.description,
+      job_type: jobTypeUtil(e.job_type),
+      title: e.title,
+      date: dateUtil(e.publication_date),
+    }
+  })
+  return adapting
 }
-  
-  // location: data.jobs.candidate_required_location,
-  // company_logo: data.jobs.company_logo,
-  // company_name: data.jobs.company_name,
-  // description: data.jobs.description,
-  // title: data.jobs.title,
-  // date: data.jobs.publication_date,
-  // console.log("hola")
+
+export default jobsAdapter
