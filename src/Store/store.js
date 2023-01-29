@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { jobsApi } from "./apis/jobs";
+import { jobsApi } from "./api/jobs";
 import jobs from "./slice/jobs"
 
 export const store = configureStore({
