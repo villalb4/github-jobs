@@ -1,14 +1,12 @@
-// import { useEffect } from 'react';
 import './App.css';
 import Header from './Components/Header/Header';
 import Skeleton from './Components/Skeleton/Skeleton';
 import Home from './Pages/Home/Home';
-import { useGetJobsQuery } from './Store/api/jobs';
+import useFetchJobs from './Hooks/useFetchJobs';
 
 function App() {
 
-  const { data, isLoading } = useGetJobsQuery()
-  // console.log(data)
+  const { isLoading } = useFetchJobs()
 
   return (
     <div className="App">
