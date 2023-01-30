@@ -8,7 +8,7 @@ function Filters() {
         {/* --- Full time filter --- */}
         <div className='Filters_divFullTime'>
           <input type="checkbox" name="full_time"/>
-          <label htmlFor="full_time">Full Time</label>
+          <label htmlFor="full_time">Full time</label>
         </div>
         {/* --- Location filter --- */}
         <div className='Filters_divLocation'>
