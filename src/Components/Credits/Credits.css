@@ -1,0 +1,17 @@
+.Credits {
+  text-align: center;
+  margin: 154px 0 24px 0;
+}
+
+.Credits > span {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #B9BDCF;
+}
+.Credits > span > a {
+  font-weight: 700;
+  color: #B9BDCF;
+}
