@@ -6,7 +6,7 @@ import useFetchJobs from '../../Hooks/useFetchJobs'
 
 function Cards() {
 
-  const { jobs, isLoading } = useFetchJobs()
+  const { currentJobs, isLoading } = useFetchJobs()
 
   return (
     <div className='Cards'>
@@ -14,7 +14,7 @@ function Cards() {
         isLoading === true ?
           null :
 
-          jobs.map((e, i) => {
+          currentJobs.map((e, i) => {
             return (
               <div className='Cards_card' key={i}>
                 <div className='Cards_cardDivLogo'>
