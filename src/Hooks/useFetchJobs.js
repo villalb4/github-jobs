@@ -15,7 +15,23 @@ const useFetchJobs = () => {
     }
   }, [fetchJobs, isLoading]);
 
-  return {jobs, isLoading, fetchJobs}
+
+  // ---- Pagination ----
+  const currentPage = useSelector(state => state.pagination.currentPage)
+  const postPerPage = useSelector(state => state.pagination.postPerPage)
+  const lastIndex = currentPage * postPerPage
+  const firstIndex = lastIndex - postPerPage
+  const currentJobs = jobs.slice(firstIndex, lastIndex)
+
+  const pageNumbers = []
+  for(let i = 1; i <= Math.ceil(jobs.length / postPerPage); i ++) {
+    pageNumbers.push(i)
+  }
+
+  // console.log(pageNumbers)
+    
+
+  return {currentJobs, isLoading, fetchJobs, pageNumbers, currentPage}
 }
 
 export default useFetchJobs
