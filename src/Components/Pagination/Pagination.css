@@ -1,0 +1,36 @@
+.Pagination_Prev, .Pagination_Next, .Pagination_divNumbers > button {
+  background-color: white;
+  padding: 6px 6px 3px 6px;
+  border: 1px solid #B7BCCE;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all ease 0.2s;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #B9BDCF;
+}
+.Pagination_Prev:hover, .Pagination_Next:hover, .Pagination_divNumbers > button:hover {
+  border: 1px solid #1E86FF;
+  color: #1E86FF;
+}
+
+.Pagination_divContent {
+  display: flex;
+  gap: 12px;
+}
+
+.Pagination_Prev > img, .Pagination_Next > img {
+  height: 24px;
+  width: 24px;
+  pointer-events: none;
+}
+
+.Pagination_divNumbers {
+  display: flex;
+}
+.Pagination_divNumbers > button {
+  height: 38px;
+  width: 38px;
+}
