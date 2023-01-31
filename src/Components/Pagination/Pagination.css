@@ -1,5 +1,5 @@
-.Pagination_Prev, .Pagination_Next, .Pagination_divNumbers > button {
-  background-color: white;
+.Pagination_Prev, .Pagination_Next, .Pagination_button {
+  background-color: transparent;
   padding: 6px 6px 3px 6px;
   border: 1px solid #B7BCCE;
   border-radius: 4px;
@@ -11,9 +11,15 @@
   line-height: 14px;
   color: #B9BDCF;
 }
-.Pagination_Prev:hover, .Pagination_Next:hover, .Pagination_divNumbers > button:hover {
+.Pagination_Prev:hover, .Pagination_Next:hover, .Pagination_button:hover {
   border: 1px solid #1E86FF;
   color: #1E86FF;
+}
+
+.Pagination_button.active {
+  border: 1px solid #1E86FF;
+  background-color: #1E86FF;
+  color: #ffffff;
 }
 
 .Pagination_divContent {
