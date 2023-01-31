@@ -4,3 +4,8 @@
   gap: 32px;
   margin: 42px 0 32px 0;
 }
+
+.Home_divPagination {
+  display: flex;
+  justify-content: flex-end;
+}
