@@ -1,6 +1,7 @@
 import { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getJobs } from "../Store/thunks/jobsFetchThunk";
+import usePagination from "../Hooks/usePagination"
 
 const useFetchJobs = () => {
   const dispatch = useDispatch()
@@ -17,19 +18,7 @@ const useFetchJobs = () => {
 
 
   // ---- Pagination ----
-  const currentPage = useSelector(state => state.pagination.currentPage)
-  const postPerPage = useSelector(state => state.pagination.postPerPage)
-  const lastIndex = currentPage * postPerPage
-  const firstIndex = lastIndex - postPerPage
-  const currentJobs = jobs.slice(firstIndex, lastIndex)
-
-  const pageNumbers = []
-  for(let i = 1; i <= Math.ceil(jobs.length / postPerPage); i ++) {
-    pageNumbers.push(i)
-  }
-
-  // console.log(pageNumbers)
-    
+  const { currentJobs, pageNumbers, currentPage } = usePagination(jobs)
 
   return {currentJobs, isLoading, fetchJobs, pageNumbers, currentPage}
 }
