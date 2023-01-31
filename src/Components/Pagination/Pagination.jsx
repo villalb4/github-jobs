@@ -1,4 +1,6 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { setCurrentPage } from '../../Store/slice/pagination'
 import './Pagination.css'
 import prev_icon from '../../Assets/icons/prev.svg'
 import next_icon from '../../Assets/icons/next.svg'
@@ -6,10 +8,14 @@ import useFetchJobs from '../../Hooks/useFetchJobs'
 
 function Pagination() {
 
-  // https://www.youtube.com/watch?v=wAGIOCqS8tk  minute: 5:53
-  // https://www.youtube.com/watch?v=GmWUYZ2xovI aprox minute: 10:00
+  const dispatch = useDispatch()
 
   const { pageNumbers, currentPage } = useFetchJobs()
+
+  const handleClick = (e) => {
+    const value = e.target.value
+    dispatch(setCurrentPage(value))
+  }
 
   return (
     <div className='Pagination'>
@@ -22,7 +28,11 @@ function Pagination() {
           pageNumbers.map((e, i) => {
             return (
               <div key={i} className="Pagination_divNumbers">
-                <button className={currentPage === e ? "Pagination_buttonActive" : "Pagination_button"}>{e}</button>
+                <button 
+                  value={e}
+                  onClick={handleClick}
+                  className={currentPage === e ? "Pagination_button active" : "Pagination_button"}
+                >{e}</button>
               </div>
             )
           })
