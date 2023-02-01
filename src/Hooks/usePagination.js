@@ -12,7 +12,7 @@ const usePagination = (jobs) => {
     pageNumbers.push(i)
   }
 
-  return {currentPage, currentJobs, pageNumbers}
+  return { currentPage, currentJobs, pageNumbers }
 }
 
 export default usePagination
