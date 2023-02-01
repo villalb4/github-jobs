@@ -4,47 +4,40 @@ import { setCurrentPage } from '../../Store/slice/pagination'
 import './Pagination.css'
 import prev_icon from '../../Assets/icons/prev.svg'
 import next_icon from '../../Assets/icons/next.svg'
-import useFetchJobs from '../../Hooks/useFetchJobs'
+import usePagination from '../../Hooks/useFetchJobs'
 
 function Pagination() {
 
   const dispatch = useDispatch()
 
-  const { pageNumbers, currentPage } = useFetchJobs()
+  const { pageNumbers, currentPage } = usePagination()
 
-  const handleClick = (e) => {
-    const value = e
-    dispatch(setCurrentPage(value))
+  const handleScroll = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     })
   }
 
-  const handleNext = () => {
-    if(currentPage < pageNumbers.length) {
-      dispatch(setCurrentPage(currentPage + 1))
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      })
-    }
+  const handleClick = (e) => {
+    const value = e
+    dispatch(setCurrentPage(value))
+    handleScroll()
   }
 
-  const handlePrev = () => {
-    if(currentPage > 1) {
-      dispatch(setCurrentPage(currentPage - 1))
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      })
-    }
-  }
+  const handleMove = (direction) => {
+    dispatch(setCurrentPage(
+      direction === 'next' ?
+      (currentPage < pageNumbers.length ? currentPage + 1 : currentPage) :
+      (currentPage > 1 ? currentPage - 1 : currentPage)
+    ))
+    handleScroll()
+  } 
 
   return (
     <div className='Pagination'>
       <div className='Pagination_divContent'>
-        <button className='Pagination_Prev' onClick={handlePrev}>
+        <button className='Pagination_Prev' onClick={() => handleMove("prev")}>
           <img src={prev_icon} alt="" />
         </button>
 
@@ -61,7 +54,7 @@ function Pagination() {
           })
         }
         
-        <button className='Pagination_Next' onClick={handleNext}>
+        <button className='Pagination_Next' onClick={() => handleMove("next")}>
           <img src={next_icon} alt="" />
         </button>
       </div>
