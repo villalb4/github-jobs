@@ -13,14 +13,38 @@ function Pagination() {
   const { pageNumbers, currentPage } = useFetchJobs()
 
   const handleClick = (e) => {
-    const value = e.target.value
+    const value = e
     dispatch(setCurrentPage(value))
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
+  const handleNext = () => {
+    if(currentPage < pageNumbers.length) {
+      dispatch(setCurrentPage(currentPage + 1))
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
+  }
+
+  const handlePrev = () => {
+    if(currentPage > 1) {
+      dispatch(setCurrentPage(currentPage - 1))
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
   }
 
   return (
     <div className='Pagination'>
       <div className='Pagination_divContent'>
-        <button className='Pagination_Prev'>
+        <button className='Pagination_Prev' onClick={handlePrev}>
           <img src={prev_icon} alt="" />
         </button>
 
@@ -29,8 +53,7 @@ function Pagination() {
             return (
               <div key={i} className="Pagination_divNumbers">
                 <button 
-                  value={e}
-                  onClick={handleClick}
+                  onClick={() => handleClick(e)}
                   className={currentPage === e ? "Pagination_button active" : "Pagination_button"}
                 >{e}</button>
               </div>
@@ -38,7 +61,7 @@ function Pagination() {
           })
         }
         
-        <button className='Pagination_Next'>
+        <button className='Pagination_Next' onClick={handleNext}>
           <img src={next_icon} alt="" />
         </button>
       </div>
