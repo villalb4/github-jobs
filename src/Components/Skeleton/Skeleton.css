@@ -1,6 +1,8 @@
 .Skeleton {
   /* background-color: red; */
-  width: 100%;
+  max-width: 1261px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 .Skeleton_header {
