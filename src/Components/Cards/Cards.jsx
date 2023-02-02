@@ -3,20 +3,18 @@ import './Cards.css'
 import planet from '../../Assets/icons/planet.svg'
 import clock from '../../Assets/icons/clock.svg'
 import useFetchJobs from '../../Hooks/useFetchJobs'
+import { Link } from 'react-router-dom'
 
 function Cards() {
-
-  const { currentJobs, isLoading } = useFetchJobs()
+  
+  const { currentJobs } = useFetchJobs()
 
   return (
     <div className='Cards'>
       {
-        isLoading === true ?
-          null :
-
           currentJobs.map((e, i) => {
             return (
-              <div className='Cards_card' key={i}>
+              <Link to={`/job/${e.id}`} className='Cards_card' key={i}>
                 <div className='Cards_cardDivLogo'>
                   <img src={e.company_logo} alt="company logo" />
                 </div>
@@ -41,7 +39,7 @@ function Cards() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             )
           })
       }
