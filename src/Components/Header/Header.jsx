@@ -1,10 +1,11 @@
 import React from 'react'
 import './Header.css'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
     <header>
-      <h1>Github <span>Jobs</span></h1>
+      <Link to="/" className='Header_logo'>Github <span>Jobs</span></Link>
     </header>
   )
 }
