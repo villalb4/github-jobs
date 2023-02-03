@@ -1,0 +1,25 @@
+.Apply {
+  max-width: 231px;
+  width: 100%;
+  font-family: 'Poppins';
+  font-style: normal;
+}
+
+.Apply_h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: #B9BDCF;
+  margin-bottom: 16px;
+}
+
+.Apply_HowTo, .Apply_emails {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #334680;
+}
+
+.Apply_emails > span {
+  color: #1E86FF;
+}
