@@ -1,0 +1,19 @@
+.Details_applyDescription {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.Details_section {
+  max-width: 889px;
+}
+
+.Details_divBack {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1E86FF;
+  margin-bottom: 36px;
+}
