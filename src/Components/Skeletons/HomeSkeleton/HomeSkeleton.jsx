@@ -1,7 +1,7 @@
 import React from 'react'
-import './Skeleton.css'
+import './HomeSkeleton.css'
 
-function Skeleton() {
+function HomeSkeleton() {
   return (
     <div className='Skeleton'>
       <div className='Skeleton_header'>
@@ -17,4 +17,4 @@ function Skeleton() {
   )
 }
 
-export default Skeleton
+export default HomeSkeleton
