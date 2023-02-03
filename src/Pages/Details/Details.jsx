@@ -1,16 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Credits from '../../Components/Credits/Credits'
+import Header from '../../Components/Header/Header'
 import useFetchJobs from '../../Hooks/useFetchJobs'
 
 function Details() {
   const { jobId } = useParams()
-  const { jobDetail } = useFetchJobs(jobId)
+  const { jobDetail, isLoading } = useFetchJobs(jobId)
 
-  console.log(jobDetail)
+  // console.log(jobDetail)
+
+  useEffect(()=> {
+    window.scrollTo(0,0)
+  },[])
+
+  if(isLoading) return <div>.Cargando...</div>
 
   return (
     <div>
+      <Header />
       <h2>{jobDetail.title}</h2>
       <span>{jobDetail.date}</span>
       <div>
