@@ -6,6 +6,9 @@
 
 .Details_section {
   max-width: 889px;
+  width: 100%;
+  font-family: 'Roboto';
+  font-style: normal;
 }
 
 .Details_divBack {
@@ -36,8 +39,6 @@
 
 /* ------ JOBS DESCRIPTRION ------ */
 .Deatils_jobTitle {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -55,8 +56,6 @@
   padding: 1.5px 8px 2px 6.38px;
 }
 .Details_divJobType > span {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
@@ -67,8 +66,6 @@
   display: flex;
   align-items: center;
   gap: 7px;
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -85,8 +82,6 @@
   margin-bottom: 32px;
 }
 .Details_divNameLocation > span {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
@@ -102,8 +97,6 @@
   max-width: 18px;
 }
 .Details_divNameLocation > div > span {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -120,13 +113,8 @@
 }
 
 .Details_divDescription {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  /* or 24px */
-  
-  
   color: #334680;
 }
