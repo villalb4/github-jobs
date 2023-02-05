@@ -42,12 +42,17 @@
   color: #334680;
   margin-top: 1px;
 }
+
 .Cards_cardJobTitle {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #334680;
   margin: 8px 0 13px 0;
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .Cards_cardDivJobType {
   border: 1px solid #334680;
@@ -76,7 +81,37 @@
   line-height: 14px;
   color: #B9BDCF;
 }
+.Cards_cardDivLocation > span, .Cards_cardDivDate > span {
+  max-width: 75px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .Cards_cardDivLocation > img, .Cards_cardDivDate > img {
   height: 18px;
   width: 18px;
+}
+
+
+@media screen and (max-width: 822px) {
+  .Cards_cardDivInfo {
+    flex-direction: column;
+    gap: 26px;
+  }
+  .Cards_cardJobTitle {
+    margin: 8px 0 13px 0;
+    max-width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .Cards_cardDateLocation {
+    margin: 0;
+  }
+  .Cards_cardDivLocation > span, .Cards_cardDivDate > span {
+    max-width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }

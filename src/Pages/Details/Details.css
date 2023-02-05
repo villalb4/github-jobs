@@ -118,3 +118,25 @@
   line-height: 150%;
   color: #334680;
 }
+
+
+@media screen and (max-width: 900px) {
+  .Details_divTitleType {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .Details_divTitleType > div {
+    max-width: 64px;
+  }
+  .Deatils_jobTitle {
+    max-width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
+@media screen and (max-width: 675px) {
+
+}
