@@ -56,7 +56,7 @@ function Details() {
             </div>
           </div>
           <div className='Details_divDescription'>
-            <p>{jobDetail.description}</p>
+            <p dangerouslySetInnerHTML={{__html: jobDetail.description}}></p>
           </div>
         </section>
       </div>
