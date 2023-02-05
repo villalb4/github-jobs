@@ -13,8 +13,6 @@ function Details() {
   const { jobId } = useParams()
   const { jobDetail, isLoading } = useFetchJobs(jobId)
 
-  // console.log(jobDetail)
-
   useEffect(()=> {
     window.scrollTo(0,0)
   },[])
@@ -26,7 +24,7 @@ function Details() {
       <Header />
       <div className='Details_applyDescription'>
         <div>
-          <div className='Details_divBack'>
+          <div onClick={() => window.history.back()} replace className='Details_divBack'>
             <img src={back_icon} alt="" />
             <span className='Details_backToSearch'>Back to search</span>
           </div>
