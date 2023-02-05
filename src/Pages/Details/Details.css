@@ -9,6 +9,9 @@
 }
 
 .Details_divBack {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
@@ -16,4 +19,114 @@
   line-height: 21px;
   color: #1E86FF;
   margin-bottom: 36px;
+  border-radius: 4px;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+.Details_divBack > img {
+  max-width: 24px;
+  pointer-events: none;
+}
+
+.Details_divBack:hover {
+  background-color: #1e87ff13;
+}
+
+
+/* ------ JOBS DESCRIPTRION ------ */
+.Deatils_jobTitle {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #334680;
+}
+
+.Details_divTitleType {
+  display: flex;
+  gap: 17px;
+}
+.Details_divJobType {
+  border: 1px solid #334680;
+  border-radius: 4px;
+  height: 26px;
+  padding: 1.5px 8px 2px 6.38px;
+}
+.Details_divJobType > span {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #334680;
+}
+
+.Details_divDate {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #B7BCCE;
+  margin: 10px 0 32px 0;
+}
+.Details_divDate > img {
+  max-width: 18px;
+}
+
+.Details_divCompanyInfo {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.Details_divNameLocation > span {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #334680;
+}
+.Details_divNameLocation > div {
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+  margin-top: 2px;
+}
+.Details_divNameLocation > div > img {
+  max-width: 18px;
+}
+.Details_divNameLocation > div > span {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #B9BDCF;
+  width: 200px;
+}
+.Details_divImage {
+  height: 42px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.Details_divImage > img {
+  max-width: 42px;
+}
+
+.Details_divDescription {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  /* or 24px */
+  
+  
+  color: #334680;
 }
