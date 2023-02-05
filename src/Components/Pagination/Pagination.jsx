@@ -32,7 +32,7 @@ function Pagination() {
       (currentPage > 1 ? currentPage - 1 : currentPage)
     ))
     handleScroll()
-  } 
+  }
 
   return (
     <div className='Pagination'>
@@ -42,7 +42,7 @@ function Pagination() {
         </button>
 
         {
-          pageNumbers.map((e, i) => {
+          pageNumbers.slice(currentPage - 1, currentPage + 4).map((e, i) => {
             return (
               <div key={i} className="Pagination_divNumbers">
                 <button 
