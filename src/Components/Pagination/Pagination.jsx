@@ -37,7 +37,7 @@ function Pagination() {
   return (
     <div className='Pagination'>
       <div className='Pagination_divContent'>
-        <button className='Pagination_Prev' onClick={() => handleMove("prev")}>
+        <button className={currentPage === 1 ? 'Pagination_Prev disabled' : 'Pagination_Prev'} onClick={() => handleMove("prev")}>
           <img src={prev_icon} alt="" />
         </button>
 
@@ -54,7 +54,7 @@ function Pagination() {
           })
         }
         
-        <button className='Pagination_Next' onClick={() => handleMove("next")}>
+        <button className={currentPage === pageNumbers.length ? 'Pagination_Next disabled' : 'Pagination_Next'} onClick={() => handleMove("next")}>
           <img src={next_icon} alt="" />
         </button>
       </div>

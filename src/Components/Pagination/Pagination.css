@@ -16,6 +16,11 @@
   color: #1E86FF;
 }
 
+.Pagination_Prev.disabled, .Pagination_Next.disabled {
+  opacity: 60%;
+  pointer-events: none;
+}
+
 .Pagination_button.active {
   border: 1px solid #1E86FF;
   background-color: #1E86FF;
