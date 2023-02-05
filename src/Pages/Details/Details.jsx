@@ -24,7 +24,7 @@ function Details() {
       <Header />
       <div className='Details_applyDescription'>
         <div>
-          <div onClick={() => window.history.back()} replace className='Details_divBack'>
+          <div onClick={() => window.history.back()} className='Details_divBack'>
             <img src={back_icon} alt="" />
             <span className='Details_backToSearch'>Back to search</span>
           </div>
