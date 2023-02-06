@@ -43,6 +43,7 @@ h2 {
   border: none;
   outline: none;
   padding: 17px 0;
+  text-overflow: ellipsis;
 }
 .Filters_divLocation > div > input::placeholder {
   font-weight: 400;
@@ -72,4 +73,20 @@ h2 {
   height: 18px;
   cursor: pointer;
   margin-left: 12px;
+}
+
+
+@media screen and (max-width: 822px) {
+  .Filters {
+    max-width: 320px;
+    width: 100%;
+  }
+  
+}
+
+@media screen and (max-width: 654px) {
+  .Filters {
+    max-width: 700px;
+    width: 100%;
+  }
 }

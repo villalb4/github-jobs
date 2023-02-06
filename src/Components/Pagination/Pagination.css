@@ -45,3 +45,16 @@
   height: 38px;
   width: 38px;
 }
+
+@media screen and (max-width: 654px) {
+  .Pagination {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .Pagination_divContent {
+    display: flex;
+    gap: 7px;
+  }
+}
