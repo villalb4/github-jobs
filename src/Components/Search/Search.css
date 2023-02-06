@@ -8,6 +8,7 @@
 
 .Search_searcher {
   display: flex;
+  gap: 20px;
   justify-content: space-between;
   max-width: 790px;
   width: 100%;
@@ -39,7 +40,7 @@
   width: 100%;
   border: none;
   outline: none;
-  /* background-color: red; */
+  text-overflow: ellipsis;
 }
 .Search_divInput > input::placeholder {
   font-weight: 300;
@@ -60,4 +61,14 @@
   border: none;
   outline: none;
   transition: all ease 0.3s;
+}
+
+
+@media screen and (max-width: 489px) {
+  .Search_content {
+    padding: 42px 18px 41px 18px;
+  }
+  .Search_divButton > input {
+    padding: 14px 27px;
+  }  
 }
