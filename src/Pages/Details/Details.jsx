@@ -32,7 +32,9 @@ function Details() {
         </div>
         <section className='Details_section'>
           <div className='Details_divTitleType'>
-            <h2 className='Deatils_jobTitle'>{jobDetail.title}</h2>
+            <div className='Detail_divJobTitle'>
+              <p className='Deatils_jobTitle'>{jobDetail.title}</p>
+            </div>
             <div className='Details_divJobType'>
               <span>{jobDetail.job_type}</span>
             </div>
