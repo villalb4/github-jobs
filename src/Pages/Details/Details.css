@@ -38,6 +38,11 @@
 
 
 /* ------ JOBS DESCRIPTRION ------ */
+.Detail_divJobTitle {
+  max-width: 750px;
+  width: 100%;
+  overflow: hidden;
+}
 .Deatils_jobTitle {
   font-weight: 700;
   font-size: 24px;
@@ -125,7 +130,7 @@
     flex-direction: column;
     gap: 4px;
   }
-  .Details_divTitleType > div {
+  .Details_divTitleType > .Details_divJobType {
     max-width: 64px;
   }
   .Deatils_jobTitle {
@@ -136,6 +141,15 @@
   }
 }
 
+li {
+  list-style-type: none;
+}
+
+@media screen and (max-width: 730px) {
+  .Details_applyDescription {
+    flex-direction: column;
+  }
+}
 
 @media screen and (max-width: 675px) {
 

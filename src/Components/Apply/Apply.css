@@ -23,3 +23,13 @@
 .Apply_emails > span {
   color: #1E86FF;
 }
+
+
+@media screen and (max-width: 467px) {
+  .Apply {
+    max-width: 450px;
+    width: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+  }
+}
